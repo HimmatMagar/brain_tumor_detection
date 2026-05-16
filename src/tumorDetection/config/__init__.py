@@ -6,9 +6,8 @@ from tumorDetection.utils import *
 
 class ConfigurationManager:
 
-      def __init__(self, config = config, params = params):
+      def __init__(self, config = config):
             self.config = read_yaml(config)
-            self.params = read_yaml(params)
 
 
             create_dir([self.config.root_artifact_dir])
@@ -22,4 +21,14 @@ class ConfigurationManager:
                   data_path = config.data_path,
                   zip_file = config.zip_file,
                   unzip_file = config.unzip_file
+            )
+
+      def get_model_training_config(self) -> ModelBuildingConfig:
+            config = self.config.train_model
+            create_dir([config.root_dir])
+
+            return ModelBuildingConfig(
+                  root_dir = config.root_dir,
+                  train_data = config.train_data,
+                  model = config.model
             )
