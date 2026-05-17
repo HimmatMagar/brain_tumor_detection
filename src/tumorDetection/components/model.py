@@ -1,3 +1,4 @@
+from tumorDetection import logger
 from torchvision import models
 import torch.nn as nn
 
@@ -5,7 +6,6 @@ class VGG16:
 
       def __init__(self):
             self.model = models.vgg16()
-      
 
       def prepare_model(self):
             self.model.classifier = nn.Sequential(
@@ -18,4 +18,5 @@ class VGG16:
             for params in self.model.features:
                   params.requires_grad = False
 
+            logger.info(f"Downloaded Model: {self.model}")
             return self.model
