@@ -1,9 +1,0 @@
-ensure
-python-box
-fastapi
-uvicorn
-notebook
-torch
-torchvision
-pyYAML
-gdown
