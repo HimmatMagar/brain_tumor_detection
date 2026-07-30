@@ -1,5 +1,5 @@
 [project]
-name = "brain-tumor-detection"
+name = "tumorDetection"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -11,6 +11,7 @@ dependencies = [
     "notebook>=7.6.1",
     "python-box>=7.4.1",
     "pyyaml>=6.0.3",
+    "setuptools>=83.0.0",
     "torch>=2.13.0",
     "torchvision>=0.28.0",
     "uvicorn>=0.52.0",
