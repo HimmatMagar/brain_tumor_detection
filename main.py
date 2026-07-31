@@ -3,15 +3,15 @@ from src.tumorDetection.pipeline.data_ingestion_pipeline import DataIngestionPip
 from src.tumorDetection.pipeline.model_training_pipeline import ModelTrainingPipeline
 
 
-# STAGE_NAME = "Data Ingestion Stage"
-# try:
-#       logger.info(f">>>>>> {STAGE_NAME} started <<<<<<")
-#       obj = DataIngestionPipeline()
-#       obj.main()
-#       logger.info(f">>>>>> {STAGE_NAME} completed <<<<<<")
-# except Exception as e:
-#       logger.exception(e)
-#       raise e
+STAGE_NAME = "Data Ingestion Stage"
+try:
+      logger.info(f">>>>>> {STAGE_NAME} started <<<<<<")
+      obj = DataIngestionPipeline()
+      obj.main()
+      logger.info(f">>>>>> {STAGE_NAME} completed <<<<<<")
+except Exception as e:
+      logger.exception(e)
+      raise e
 
 
 stage_name = "Model Training Stage"
